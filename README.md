@@ -1,104 +1,45 @@
-[![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
-# CacheTest
+[![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
 This archive is distributed in association with the [INFORMS Journal on
 Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
-The software and data in this repository are a snapshot of the software and data
-that were used in the research reported on in the paper 
-[This is a Template](https://doi.org/10.1287/ijoc.2019.0934) by T. Ralphs. 
-The snapshot is based on 
-[this SHA](https://github.com/tkralphs/JoCTemplate/commit/f7f30c63adbcb0811e5a133e1def696b74f3ba15) 
-in the development repository. 
-
-**Important: This code is being developed on an on-going basis at 
-https://github.com/tkralphs/JoCTemplate. Please go there if you would like to
-get a more recent version or would like support**
-
-## Cite
+The data in this repository is an archive of the data that were used in the research reported on in the paper [An Interior-Point Differentiable Path-Following Method to Compute Stationary Equilibria in Stochastic Games](link) by Chuangyin Dang, P.Jean-Jacques Herings and Peixuan Li.
 
 To cite this software, please cite the [paper](https://doi.org/10.1287/ijoc.2019.0934) using its DOI and the software itself, using the following DOI.
 
 [![DOI](https://zenodo.org/badge/285853815.svg)](https://zenodo.org/badge/latestdoi/285853815)
 
-Below is the BibTex for citing this version of the code.
+Below is the BibTex for citing this version of the data.
 
 ```
-@article{CacheTest,
-  author =        {T. Ralphs},
+@article{Data.IJOC.link,
+  author =        {Chuangyin Dang, P.Jean-Jacques Herings and Peixuan Li},
   publisher =     {INFORMS Journal on Computing},
-  title =         {{CacheTest} Version v1.0},
-  year =          {2020},
-  doi =           {10.5281/zenodo.3977566},
-  url =           {https://github.com/INFORMSJoC/JoCTemplate},
+  title =         {Data for An Interior-Point Differentiable Path-Following
+Method to Compute Stationary Equilibria in Stochastic Games},
+  year =          {2021},
+  doi =           {doi},
+  url =           {https://github.com/INFORMSJoC/2020.0259},
 }  
 ```
 
-## Description
+## Content
+The IPM works in MatLab software. This repository includes the source code and computational results for all randomly generated numerical instances presented in the paper.
+### Code files 
+The code folders include **CoASLTP**, **CoPathsolver** and **Bargaining**.
+1. The code in the folder **CoASLTP** is for comparing the proposed interior-point difierentiable path-following method (**IPM**) and the **ASLTP**, where the file [ycsgse.m](CoASLTP/ycsgse.m) is the main program of the **IPM** and [dltpsgse.m](CoASLTP/dltpsgse.m) is the main program of the **ASLTP**. The code in this folder has been used in Section 4.1.
+2. The code in the folder **CoPathsolver** is for comparing the proposed **IPM** and the **path solver**, where the file [trysg.m](CoPathsolver/trysg.m) is the main program. The code in this folder has been used in Sections 4.2 and 4.3.
+3. The folder **Bargaining** includes the code for computing a solution to the bargaining model, which has been presented in Section 4.4.
+### Results files
+The results folders **comp-ASLTP**, **comp-pathsolver** and **morecomplicated** record the computational results for all numerical examples used in the paper.
+1. The files [A0.txt](comp-ASLTP/A0.txt), [A1.txt](comp-ASLTP/A1.txt), [A2.txt](comp-ASLTP/A2.txt), [A3.txt](comp-ASLTP/A3.txt) in the folder **comp-ASLTP** consist of the computational time and number of iterations of **IPM** and **ASLTP** for solving various stochastic games. We summarize these comparison results in the file [comp-sltp.xlsx](comp-ASLTP/comp-sltp.xlsx). The average computational time has been reported in Table 1 of the manuscript. 
+2. The file [comp-path.txt](comp-pathsolver/comp-path.txt) in the folder **comp-pathsolver** includes the comparison results between the proposed **IPM** and the **path solver**. We summarize these results in an excel sheet named [comp-path.xlsx](comp-pathsolver/comp-path.xlsx), which is exactly Table 2 in the manuscript. Additionally, the file [test-success-rate.txt](comp-pathsolver/test-success-rate.txt) consists of the results of the path solver for stochastic games with different scales and the success rate among 100 randomly generated examples for each case.
+3. The files [rdata0.txt](morecomplicated/rdata0.txt),...,[rdata11.txt](morecomplicated/rdata11.txt) in the folder **morecomplicated** record the computational time of **IPM** for all large-scale stochastic games. We summarize these instance results in [more-complicated.xlsx](morecomplicated/more-complicated.xlsx). The average computation time for each case has been reported in Table 3 of the paper.
 
-The goal of this software is to demonstrate the effect of cache optimization.
+We finally illustrate how to implement the code and associate the code files with the numerical results (e.g., tables and figures) presented in the paper.
+1. By running the files [exm1.m](CoASLTP/exm1.m), [exm2.m](CoASLTP/exm2.m), [exm3.m](CoASLTP/exm3.m),  [exm4.m](CoASLTP/exm4.m), [exm5.m](CoASLTP/exm5.m) in the folder **CoASLTP**, one can obtain the computational results for the five fundamental examples in Section 4.1.
+5. By running the file [inputs225.m](CoASLTP/inputs225.m) in the folder **CoASLTP**, one can get a stationary equilibrium for a stochastic game with two players, two states and five actions for each player in each state. The computational costs of the **IPM** and **ASLTP** for solving this instance are obtained as well. By repeatedly running [inputs225.m](CoASLTP/inputs225.m) for ten times, one can obtain the average computational time for both methods, which is shown in the first row of Table 1. Through changing the parameters *n*; *d*; *m*; *pd0* in [inputs225.m](CoASLTP/inputs225.m), we can attain various instances. The average computational time of IPM for solving these stochastic games are shown in Table 1 and Table 3.
+6. By implementing the file  [se225.m](CoPathsolver/se225.m) in the folder **CoPathsolver**, one can get the comparison results between the proposed **IPM** and the **path solver** for computing a stationary equilibrium in a randomly generated stochastic game with two players, two states and five actions. Similarly, by changing the parameters *n*; *d*;*m*, we attain various stochastic games with difierent scales. The comparison results are included in Table 2. By running the file [r1.m](CoPathsolver/r1.m), one may obtain the success rates of the two methods for 100 randomly generated stochastic games, which are recorded in Figure 5.
+7. By implementing the file [bargaining.m](Bargaining/bargaining.m) in the folder **Bargaining**, one can get Figure 6, which shows a solution to the presented bargaining model.
 
-## Building
-
-In Linux, to build the version that multiplies all elements of a vector by a
-constant (used to obtain the results in [Figure 1](results/mult-test.png) in the
-paper), stepping K elements at a time, execute the following commands.
-
-```
-make mult
-```
-
-Alternatively, to build the version that sums the elements of a vector (used
-to obtain the results [Figure 2](results/sum-test.png) in the paper), stepping K
-elements at a time, do the following.
-
-```
-make clean
-make sum
-```
-
-Be sure to make clean before building a different version of the code.
-
-## Results
-
-Figure 1 in the paper shows the results of the multiplication test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
-
-![Figure 1](results/mult-test.png)
-
-Figure 2 in the paper shows the results of the sum test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
-
-![Figure 1](results/sum-test.png)
-
-## Replicating
-
-To replicate the results in [Figure 1](results/mult-test), do either
-
-```
-make mult-test
-```
-or
-```
-python test.py mult
-```
-To replicate the results in [Figure 2](results/sum-test), do either
-
-```
-make sum-test
-```
-or
-```
-python test.py sum
-```
-
-## Ongoing Development
-
-This code is being developed on an on-going basis at the author's
-[Github site](https://github.com/tkralphs/JoCTemplate).
-
-## Support
-
-For support in using this software, submit an
-[issue](https://github.com/tkralphs/JoCTemplate/issues/new).
