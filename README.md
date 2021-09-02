@@ -1,37 +1,30 @@
 
 [![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
+# An Interior-Point Differentiable Path-Following Method to Compute Stationary Equilibria in Stochastic Games
+
 This archive is distributed in association with the [INFORMS Journal on
 Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
-The data in this repository is an archive of the data that were used in the research reported on in the paper [An Interior-Point Differentiable Path-Following Method to Compute Stationary Equilibria in Stochastic Games](link) by Chuangyin Dang, P.Jean-Jacques Herings and Peixuan Li.
+This repository is an archive of the software and data that were used in the research reported on in the paper "An Interior-Point Differentiable Path-Following Method to Compute Stationary Equilibria in Stochastic Games" by Chuangyin Dang, P.Jean-Jacques Herings and Peixuan Li.
 
-To cite this software, please cite the [paper](https://doi.org/10.1287/ijoc.2019.0934) using its DOI and the software itself, using the following DOI.
+## Cite
 
-[![DOI](https://zenodo.org/badge/285853815.svg)](https://zenodo.org/badge/latestdoi/285853815)
-
-Below is the BibTex for citing this version of the data.
-
-```
-@article{Data.IJOC.link,
-  author =        {Chuangyin Dang, P.Jean-Jacques Herings and Peixuan Li},
-  publisher =     {INFORMS Journal on Computing},
-  title =         {Data for An Interior-Point Differentiable Path-Following
-Method to Compute Stationary Equilibria in Stochastic Games},
-  year =          {2021},
-  doi =           {doi},
-  url =           {https://github.com/INFORMSJoC/2020.0259},
-}  
-```
+The final version of this repository, with updated bibliographical information, is available at [GitHub](https://github.com/INFORMSJoC/2020.0259).
 
 ## Content
+
 The IPM works in MatLab software. This repository includes the source code and computational results for all randomly generated numerical instances presented in the paper.
+
 ### Code files 
+
 The code folders include **CoASLTP**, **CoPathsolver** and **Bargaining**.
 1. The code in the folder **CoASLTP** is for comparing the proposed interior-point difierentiable path-following method (**IPM**) and the **ASLTP**, where the file [ycsgse.m](CoASLTP/ycsgse.m) is the main program of the **IPM** and [dltpsgse.m](CoASLTP/dltpsgse.m) is the main program of the **ASLTP**. The code in this folder has been used in Section 4.1.
 2. The code in the folder **CoPathsolver** is for comparing the proposed **IPM** and the **path solver**, where the file [trysg.m](CoPathsolver/trysg.m) is the main program. The code in this folder has been used in Sections 4.2 and 4.3.
 3. The folder **Bargaining** includes the code for computing a solution to the bargaining model, which has been presented in Section 4.4.
+
 ### Results files
+
 The results folders **comp-ASLTP**, **comp-pathsolver** and **morecomplicated** record the computational results for all numerical examples used in the paper.
 1. The files [A0.txt](comp-ASLTP/A0.txt), [A1.txt](comp-ASLTP/A1.txt), [A2.txt](comp-ASLTP/A2.txt), [A3.txt](comp-ASLTP/A3.txt) in the folder **comp-ASLTP** consist of the computational time and number of iterations of **IPM** and **ASLTP** for solving various stochastic games. We summarize these comparison results in the file [comp-sltp.xlsx](comp-ASLTP/comp-sltp.xlsx). The average computational time has been reported in Table 1 of the manuscript. 
 2. The file [comp-path.txt](comp-pathsolver/comp-path.txt) in the folder **comp-pathsolver** includes the comparison results between the proposed **IPM** and the **path solver**. We summarize these results in an excel sheet named [comp-path.xlsx](comp-pathsolver/comp-path.xlsx), which is exactly Table 2 in the manuscript. Additionally, the file [test-success-rate.txt](comp-pathsolver/test-success-rate.txt) consists of the results of the path solver for stochastic games with different scales and the success rate among 100 randomly generated examples for each case.
