@@ -10,7 +10,22 @@ This repository is an archive of the software and data that were used in the res
 
 ## Cite
 
-The final version of this repository, with updated bibliographical information, is available at [GitHub](https://github.com/INFORMSJoC/2020.0259).
+To cite this material, please cite this repository, using the following DOI.
+
+[![DOI](https://zenodo.org/badge/401957629.svg)](https://zenodo.org/badge/latestdoi/401957629)
+
+Below is the BibTex for citing this version of the repository.
+
+```
+@article{IPDPFCSESG,
+  author =        {Chuangyin Dang, P.Jean-Jacques Herings and Peixuan Li},
+  publisher =     {INFORMS Journal on Computing},
+  title =         {Data for An Interior-Point Differentiable Path-Following Method to Compute Stationary Equilibria in Stochastic Games},
+  year =          {2021},
+  doi =           {DOI: 10.5281/zenodo.5381196},
+  url =           {https://github.com/INFORMSJoC/2020.0259},
+}  
+```
 
 ## Content
 
