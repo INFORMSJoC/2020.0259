@@ -6,7 +6,7 @@
 This archive is distributed in association with the [INFORMS Journal on
 Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
-This repository is an archive of the software and data that were used in the research reported on in the paper "An Interior-Point Differentiable Path-Following Method to Compute Stationary Equilibria in Stochastic Games"(https://doi.org/10.1287/ijoc.2021.1139) by Chuangyin Dang, P.Jean-Jacques Herings and Peixuan Li.
+This repository is an archive of the software and data that were used in the research reported on in the paper ["An Interior-Point Differentiable Path-Following Method to Compute Stationary Equilibria in Stochastic Games"](https://doi.org/10.1287/ijoc.2021.1139) by Chuangyin Dang, P.Jean-Jacques Herings and Peixuan Li.
 
 ## Cite
 
