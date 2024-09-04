@@ -10,9 +10,7 @@ This repository is an archive of the software and data that were used in the res
 
 ## Cite
 
-To cite this material, please cite this repository, using the following DOI.
-
-[![DOI](https://zenodo.org/badge/401957629.svg)](https://zenodo.org/badge/latestdoi/401957629)
+To cite this material, please cite [the paper](https://doi.org/10.1287/ijoc.2021.1139) and [this repository](https://doi.org/10.1287/ijoc.2021.1139.cd).
 
 Below is the BibTex for citing this version of the repository.
 
