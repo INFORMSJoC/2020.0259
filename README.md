@@ -20,7 +20,7 @@ Below is the BibTex for citing this version of the repository.
   publisher =     {INFORMS Journal on Computing},
   title =         {Data for An Interior-Point Differentiable Path-Following Method to Compute Stationary Equilibria in Stochastic Games},
   year =          {2021},
-  doi =           {DOI: 10.5281/zenodo.5381196},
+  doi =           {DOI: 10.1287/ijoc.2021.1139.cd},
   url =           {https://github.com/INFORMSJoC/2020.0259},
 }  
 ```
